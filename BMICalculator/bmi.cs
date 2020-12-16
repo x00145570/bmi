@@ -8,7 +8,7 @@ namespace BMICalculator
 {
     public enum BMICategory { Underweight, Normal, Overweight, Obese };
 
-    public class BMI
+    public class Bmi
     {
         const double UnderWeightUpperLimit = 18.4;              // inclusive upper limit
         const double NormalWeightUpperLimit = 24.9;

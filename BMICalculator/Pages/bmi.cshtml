@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" id="convertForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="BMI.WeightStones" class="control-label"></label>
@@ -38,10 +38,12 @@
             @if (Request.Method == "POST")
             {
                 <div>
-                    @Html.DisplayNameFor(m => m.BMI.BMIValue)
-                    @Html.DisplayFor(m => m.BMI.BMIValue)
+                    <div id="bmiVal">
+                        @Html.DisplayNameFor(m => m.BMI.BMIValue)
+                        @Html.DisplayFor(m => m.BMI.BMIValue)
+                    </div>
                 </div>
-                <div>
+                <div id="bmiCat">
                     @Html.DisplayNameFor(m => m.BMI.BMICategory)
                     @Html.DisplayFor(m => m.BMI.BMICategory)
                 </div>
